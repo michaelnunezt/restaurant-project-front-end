@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+//Page Componentsimport SignIn from './pages/SignIn/SignIn';
+import Landing from './components/Landing/Landing';
+import Dashboard from './components/Dashboard/Dashboard';
+
+import { getUser, removeToken } from '../utils/auth'
+import SignIn from './pages/SignIn/SignIn';
+
+
+const App = () => {
+  const [user, setUser] = useState(getUser());
+
+  const navigate = useNavigate()
+
+  const handleSignOut = () => {
+    removeToken()
+    setUser(null)
+    navigate('/sign')
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        { user ? (
+          <Route path="/" element={<Dashboard user={user} />} />
+        ) : (
+          <Route path="/" element={<Landing />} />
+        )}
+        <Route path="/signIn" element={<SignIn/>}/>
+      </Routes>
     </>
-  )
-}
+  );
+};
+
 
 export default App
