@@ -1,38 +1,37 @@
-import { Carousel } from "react-bootstrap";
-import Home1 from "../../assets/images/home01.jpg"
-import Home2 from "../../assets/images/home02.jpg"
-import Home3 from "../../assets/images/home03.jpg"
-import NavBar from "../NavBar/NavBar";
-
+import { Button, Container } from "react-bootstrap";
+import MyNavBar from "../NavBar/MyNavBar";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
-    return (
-      <div style={{ position: "absolute", top: 0, width: "100%", zIndex: 1 }}>
-        <div className="positioning">
-        <NavBar />
-      </div>
+  const navigate = useNavigate();
+  const goToSignIN = () => {
+    navigate("/signIn");
+  };
+  const goToSignUp = () => {
+    navigate("/signUp");
+  };
+  return (
+    <>
+      <MyNavBar className="fixed-top" />
+      <Container className="text-white d-flex flex-column  align-items-center">
+        <h1 className="text-center text-white my-5">Oriole</h1>
 
-      <Carousel className="carousel" slide={true}>
-      <Carousel.Item>
-        <img className="img-carousel"
-          src={Home1}
-          alt="First slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="img-carousel"
-          src={Home2}
-          alt="Second slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="img-carousel"
-          src={Home3}
-          alt="Third slide"
-        />
-      </Carousel.Item>
-    </Carousel>
-</div>
+        <p>
+
+Welcome to Oriole!
+
+Sign up to join a vibrant community of food and cocktail enthusiasts. Whether you're an experienced mixologist or a curious foodie, here, you can create and share your own unique cocktails and recipes. Discover new flavors, save your favorite creations, and inspire others with your culinary masterpieces.
+
+Dive in, get creative, and start crafting unforgettable dishes and drinks today!
+        </p>
+        <div className="mt-5">
+          <Button className="mx-5" onClick={goToSignIN}>
+            Sign IN
+          </Button>
+          <Button onClick={goToSignUp}>Sign Up</Button>
+        </div>
+      </Container>
+    </>
   );
 };
 
