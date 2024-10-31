@@ -11,6 +11,8 @@ import SignIn from "./pages/SignIn/SignIn";
 import NotFound from "./components/NotFound";
 import SignupForm from "./pages/SignUp/SignupForm";
 import MyNavBar from "./components/NavBar/MyNavBar";
+import CreateCocktail from "./components/CRUD_Cocktail/CreateCocktail";
+import UpdateCocktail from "./components/CRUD_Cocktail/UpdateCocktail";
 
 const App = () => {
   const [user, setUser ] = useState(getUser());
@@ -31,6 +33,9 @@ const App = () => {
         <Route path="/signIn" element={<SignIn setUser={setUser}/>} />
         <Route path="/signUp" element={<SignupForm  setUser={setUser} />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/create-cocktail" element={<CreateCocktail/>} />
+        <Route path="/edit-cocktail/:id" element={<UpdateCocktail/>} />
+        {/* <Route path="/delete-cocktail" element={<DeleteCocktail/>} /> */}
       </Routes>
     </>
   );
