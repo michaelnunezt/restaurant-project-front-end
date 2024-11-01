@@ -12,8 +12,8 @@ import SignupForm from "./pages/SignUp/SignupForm";
 import MyNavBar from "./components/NavBar/MyNavBar";
 import CreateCocktail from "./components/CRUD_Cocktail/CreateCocktail";
 import EditCocktail from "./components/CRUD_Cocktail/EditCocktail";
-import CreateFood from "./components/CRUD_Food/CreateFood";
-import EditFood from "./components/CRUD_Food/EditFood";
+// import CreateFood from "./components/CRUD_Food/CreateFood";
+// import EditFood from "./components/CRUD_Food/EditFood";
 
 
 const App = () => {
@@ -37,8 +37,8 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
         <Route path="/create-cocktail" element={<CreateCocktail/>} />
         <Route path="/edit-cocktail/:id" element={<EditCocktail/>} />
-        <Route path="/create-food" element={<CreateFood/>} />
-        <Route path="/edit-food/:id" element={<EditFood/>} />
+        {/* <Route path="/create-food" element={<CreateFood/>} />
+        <Route path="/edit-food/:id" element={<EditFood/>} /> */}
       </Routes>
     </>
   );

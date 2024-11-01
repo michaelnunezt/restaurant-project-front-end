@@ -27,7 +27,7 @@ Dive in, get creative, and start crafting unforgettable dishes and drinks today!
         </p>
         <div className="mt-5">
           <Button className="button-dark-grey mx-5" onClick={goToSignIn}>
-            Sign IN
+            Sign In
           </Button>
           <Button className="button-dark-grey" onClick={goToSignUp}>Sign Up</Button>
         </div>

@@ -1,9 +1,12 @@
 
 main {
+  background-color: rgba(25, 25, 25, 0.9); /* Dark semi-transparent background for readability */
   padding: 40px;
-  color: #fff;
+  color: #f1f1f1; /* Light text color for contrast */
   max-width: 1200px;
   margin: 0 auto;
+  border-radius: 10px; /* Rounded corners for a soft look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
 }
 
 /* Header styles */
@@ -11,12 +14,16 @@ main h1 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #7ca26f;
+  color: #7ca26f; /* Accent color */
+  text-align: center; /* Center alignment */
 }
 
+/* Paragraph styles */
 main p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.7; /* Increased line height for readability */
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Softer light grey for paragraph text */
 }
 
 /* Section heading styles */
@@ -24,8 +31,9 @@ main h2, main h3 {
   font-size: 1.8rem;
   font-weight: bold;
   color: #7ca26f;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 15px;
+  text-align: center; /* Center align headings */
 }
 
 /* Cocktail and Food List containers */
@@ -39,19 +47,19 @@ main h2, main h3 {
   overflow-x: auto;
 }
 
-/* Card styles */
+/* Card text styles */
 .cocktail-list p, .food-list p {
   font-size: 1rem;
-  color: #252222;
+  color: #333; /* Dark grey for card text */
   text-align: center;
 }
 
 /* Button styles */
 .btn-success {
-  background-color: #28a745;
-  color: #fff;
+  background-color: #333333; /* Dark grey background for buttons */
+  color: #f1f1f1;
   font-size: 1.1rem;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -59,16 +67,19 @@ main h2, main h3 {
 }
 
 .btn-success:hover {
-  background-color: #218838;
+  background-color: #555555; /* Slightly lighter grey on hover */
 }
 
 /* Flexbox for sections */
 .section {
+  background-color: rgba(255, 255, 255, 0.1); /* Light semi-transparent background for sections */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 40px;
 }
 
 /* Responsive adjustments */
@@ -92,18 +103,18 @@ main h2, main h3 {
 
   .btn-success {
     font-size: 1rem;
-    padding: 8px 16px;
+    padding: 10px 20px;
   }
 }
 
+/* Navbar placeholder */
 .navbar {
   height: 160px; /* Adjust to match the actual height of your nav bar */
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) /* Optional, for semi-transparency */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional, for semi-transparency */
 }
+
 .dashboard-container {
   margin-top: 70px;
   padding-top: 180px; /* Match this value with the height of your navbar */
 }
-
-

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { index as indexCocktails } from '../../services/cocktailService';
-import { index as indexFood } from '../../services/foodService';
+// import { index as indexFood } from '../../services/foodService';
 import MyCardCocktail from "../MyCardCocktail/MyCardCocktail";
-import MyCardFood from "../MyCardFood/MyCardFood";
+// import MyCardFood from "../MyCardFood/MyCardFood";
 import './Dashboard.css';
 
 const Dashboard = ({ user }) => {
@@ -13,12 +13,12 @@ const Dashboard = ({ user }) => {
     navigate("/create-cocktail");
   };
 
-  const goToCreateFood = () => {
-    navigate("/create-food");
-  };
+  // const goToCreateFood = () => {
+  //   navigate("/create-food");
+  // };
 
   const [cocktailList, setCocktailList] = useState([]);
-  const [foodList, setFoodList] = useState([]);
+  // const [foodList, setFoodList] = useState([]);
 
   const getCocktailList = async () => {
     try {
@@ -30,29 +30,29 @@ const Dashboard = ({ user }) => {
     }
   };
 
-  const getFoodList = async () => {
-    try {
-      const getFoodList = await indexFood();
-      setFoodList(getFoodList || []); // Ensuring array format
-    } catch (error) {
-      console.error('Error fetching food list:', error);
-      alert("Error fetching food list");
-    }
-  };
+  // const getFoodList = async () => {
+  //   try {
+  //     const getFoodList = await indexFood();
+  //     setFoodList(getFoodList || []); // Ensuring array format
+  //   } catch (error) {
+  //     console.error('Error fetching food list:', error);
+  //     alert("Error fetching food list");
+  //   }
+  // };
 
   useEffect(() => {
     getCocktailList();
-    getFoodList();
+    // getFoodList();
   }, []);
 
   return (
     <main className="dashboard-container text-white">
   <h1>Welcome, {user?.username}</h1>
   <p>Welcome to your personal Oriole dashboard!</p>
-  <p>Here, you have the creative freedom to craft custom cocktails and delicious food dishes that showcase your culinary flair.</p>
+  <p>Here, you have the creative freedom to craft custom cocktails that showcase your flair.</p>
   <p>Explore your existing creations, update them to perfection, or start something new. With Oriole, every flavor combination is possible!</p>
 
-  <h3 className="section-heading">Your Cocktail List:</h3>
+  <h3 className="section-heading">Cocktail List:</h3>
   <div className="cocktail-list d-flex gap-4">
     {cocktailList && cocktailList.length > 0 ? (
       cocktailList.map((cocktail) => (
@@ -63,7 +63,7 @@ const Dashboard = ({ user }) => {
     )}
   </div>
 
-  <h3 className="section-heading">Your Food List:</h3>
+  {/* <h3 className="section-heading">Your Food List:</h3>
   <div className="food-list d-flex gap-4">
     {foodList && foodList.length > 0 ? (
       foodList.map((food) => (
@@ -72,7 +72,7 @@ const Dashboard = ({ user }) => {
     ) : (
       <p>No food items found.</p>
     )}
-  </div>
+  </div> */}
 
   <section className="section mt-5">
     <h2>Create a New Cocktail</h2>
@@ -80,11 +80,11 @@ const Dashboard = ({ user }) => {
     <button className="btn btn-success" onClick={goToCreateCocktail}>Create Cocktail</button>
   </section>
 
-  <section className="section mt-5">
+  {/* <section className="section mt-5">
     <h2>Create Food</h2>
     <p>Let your inner chef shine! Use the button below to invent a new dish, blending flavors and techniques that express your style.</p>
     <button className="btn btn-success" onClick={goToCreateFood}>Create Food</button>
-  </section>
+  </section> */}
 </main>
   );
 };

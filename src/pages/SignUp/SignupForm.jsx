@@ -48,10 +48,10 @@ const SignupForm = ({ setUser }) => {
         <h1 className="mb-4">Sign Up</h1>
         <div className="mb-4">
           <label htmlFor="username" className="form-label">
-            Username:
+            Email:
           </label>
           <input
-            placeholder="username"
+            placeholder="Email"
             className="form-control"
             type="text"
             id="name"

@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { edit, showCocktail } from '../../services/cocktailService';
 import { Button, Container, Form } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const EditCocktail = () => {
   const { id } = useParams()
