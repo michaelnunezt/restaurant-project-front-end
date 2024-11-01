@@ -1,12 +1,10 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { edit } from '../../services/cocktailService';
+import { edit, showCocktail } from '../../services/cocktailService';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useState } from 'react';
 
 const EditCocktail = () => {
-  const {id}=useParams()
-  console.log(`siam su edit`,id);
-  
+  const { id } = useParams()
   const [formData, setFormData] = useState({
     name: '',
     method: '',
@@ -17,6 +15,24 @@ const EditCocktail = () => {
 
   const [ingredientInput, setIngredientInput] = useState('');
   const navigate = useNavigate();
+
+    // Fetch the cocktail details 
+    useEffect(() => {
+      const fetchCocktail = async () => {
+        try {
+          const cocktail = await showCocktail(id);
+          setFormData(cocktail); // Populate formData with the fetched cocktailData
+        } catch (error) {
+          console.error('Error fetching cocktail details:', error);
+          alert('Error fetching cocktail details.');
+        }
+      };
+  
+      fetchCocktail();
+    }, [id]); 
+
+
+
 
   const handleChange = (e) => {
     setFormData({

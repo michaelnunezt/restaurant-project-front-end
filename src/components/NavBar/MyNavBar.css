@@ -1,0 +1,43 @@
+.navbar {
+  height: 160px; /* Adjust to match the actual height of your nav bar */
+  background: rgba(0, 0, 0, 0.5); /* Optional, for semi-transparency */
+}
+
+.custom-navbar {
+  background-color: transparent;
+  padding: 20px 0;
+  font-size: 18px;
+  color: white;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.custom-navbar .nav-links .nav-link {
+  color: white;
+  font-weight: 500;
+}
+
+.custom-navbar .nav-links .nav-link:hover {
+  color: #ddd;
+}
+
+.social-icons {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.social-icon {
+  color: white;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ddd;
+}

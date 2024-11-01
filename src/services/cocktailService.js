@@ -24,3 +24,9 @@ export const edit = async (id,cocktailData) => {
 export const deleteCocktail = async (id)=>{
     const {data}= await axios.delete(`${BASE_URL}/${id}`)
 }
+
+// Show 
+export const showCocktail = async (id) => {
+    const { data } =await axios.get(`${BASE_URL}/${id}`)
+    return data;
+}

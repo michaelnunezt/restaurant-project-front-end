@@ -1,0 +1,106 @@
+
+main {
+  padding: 40px;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+main h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #7ca26f;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Section heading styles */
+main h2, main h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #7ca26f;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+/* Cocktail and Food List containers */
+.cocktail-list, .food-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 90vw;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  overflow-x: auto;
+}
+
+/* Card styles */
+.cocktail-list p, .food-list p {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Button styles */
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Flexbox for sections */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main h2, main h3 {
+    font-size: 1.5rem;
+  }
+
+  .cocktail-list, .food-list {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .btn-success {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+.navbar {
+  height: 160px; /* Adjust to match the actual height of your nav bar */
+  background: rgba(0, 0, 0, 0.5); /* Optional, for semi-transparency */
+}
+.dashboard-container {
+  margin-top: 60px;
+  padding-top: 180px; /* Match this value with the height of your navbar */
+}
