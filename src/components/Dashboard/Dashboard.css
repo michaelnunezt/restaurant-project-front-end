@@ -70,7 +70,6 @@ main h2, main h3 {
   background-color: #555555; /* Slightly lighter grey on hover */
 }
 
-/* Flexbox for sections */
 .section {
   background-color: rgba(255, 255, 255, 0.1); /* Light semi-transparent background for sections */
   padding: 20px;
@@ -82,7 +81,7 @@ main h2, main h3 {
   text-align: center;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   main {
     padding: 20px;
@@ -107,14 +106,14 @@ main h2, main h3 {
   }
 }
 
-/* Navbar placeholder */
+
 .navbar {
-  height: 160px; /* Adjust to match the actual height of your nav bar */
+  height: 160px; 
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional, for semi-transparency */
 }
 
 .dashboard-container {
   margin-top: 70px;
-  padding-top: 180px; /* Match this value with the height of your navbar */
+  padding-top: 180px; 
 }
