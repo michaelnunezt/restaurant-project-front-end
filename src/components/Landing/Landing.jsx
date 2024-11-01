@@ -1,10 +1,11 @@
 import { Button, Container } from "react-bootstrap";
 import MyNavBar from "../NavBar/MyNavBar";
 import { useNavigate } from "react-router-dom";
+import './Landing.css';
 
 const Landing = () => {
   const navigate = useNavigate();
-  const goToSignIN = () => {
+  const goToSignIn = () => {
     navigate("/signIn");
   };
   const goToSignUp = () => {
@@ -25,10 +26,10 @@ Sign up to join a vibrant community of food and cocktail enthusiasts. Whether yo
 Dive in, get creative, and start crafting unforgettable dishes and drinks today!
         </p>
         <div className="mt-5">
-          <Button className="mx-5" onClick={goToSignIN}>
+          <Button className="button-dark-grey mx-5" onClick={goToSignIn}>
             Sign IN
           </Button>
-          <Button onClick={goToSignUp}>Sign Up</Button>
+          <Button className="button-dark-grey" onClick={goToSignUp}>Sign Up</Button>
         </div>
       </Container>
     </>

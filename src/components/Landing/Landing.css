@@ -1,0 +1,38 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 40px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+.container h1 {
+  font-size: 3rem; /* Increase font size for the title */
+  font-weight: bold; /* Make the title bold */
+  margin-bottom: 20px; /* Spacing below the title */
+}
+
+.container p {
+  font-size: 1.25rem; /* Adjust font size for the paragraph */
+  line-height: 1.5; /* Increase line height for better readability */
+  margin-bottom: 30px; /* Spacing below the paragraph */
+}
+
+.container button {
+  font-size: 1rem; /* Set button font size */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 5px; /* Rounded button corners */
+}
+
+.button-dark-grey {
+  background-color: #333333; /* Dark grey background */
+  color: white; /* White text for contrast */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for a comfortable size */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button-dark-grey:hover {
+  background-color: #444444; /* Slightly lighter grey on hover */
+}
